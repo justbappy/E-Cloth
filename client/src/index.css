@@ -1,0 +1,120 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* fonts */
+@font-face {
+  font-family: sprintura;
+  src: url(../public/fonts/sprintura/Sprintura\ Demo.otf);
+}
+@font-face {
+  font-family: lexend;
+  src: url(../public/fonts/lexend/Lexend-VariableFont_wght.ttf);
+}
+
+html{
+  font-family: lexend;
+}
+
+.container{
+  max-width: 95%;
+  margin: auto;
+}
+
+/* landing page hero banner */
+.landing-hero{
+  background-image: url(../public/images/landing-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: 88%;
+
+  @media (min-width:320px) and (max-width:767px){
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+  }
+}
+
+/* nav styling  */
+.navHover::after{
+  content: '';
+  display: flex;
+  flex-direction: column;
+  height: 3px;
+  width: 0%;
+  background-color: #0d101c;
+  transition: all;
+  transition-duration: 0.2s;
+}
+.navHover:hover::after{
+  width: 100%;
+  transition: all;
+  transition-duration: 0.2s;
+}
+
+/* category styling */
+.catGrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 150px);
+  gap: 10px;
+
+  @media (min-width:320px) and (max-width:767px){
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 100px);
+  }
+}
+.catGrid .catChild{
+  transition: all;
+  transition-duration: 0.3s;
+  background-color: #222222;
+  color: white;
+}
+.catGrid .catChild:hover{
+  border-radius: 10px;
+  transition: all;
+  transition-duration: 0.3s;
+  scale: 1.03;
+  color: #222222;
+  background-color: white;
+}
+
+/* hotProducts grid */
+.hotProducts{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  justify-content: center;
+
+  @media (min-width:768px) and (max-width:1240px){
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width:320px) and (max-width:767px){
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.hotChild:nth-child(7), .hotChild:nth-child(8){
+  @media (min-width:768px) and (max-width:1240px){
+    visibility: hidden !important;
+    position: absolute;
+  }
+}
+
+/* user review grid */
+.userReview{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  @media (min-width:320px) and (max-width:767px){
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* right-side */
+.rightReg{
+  @media (max-width:1300px){
+    visibility: hidden;
+    position: absolute;
+  }
+}
