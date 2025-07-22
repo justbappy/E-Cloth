@@ -118,3 +118,30 @@ html{
     position: absolute;
   }
 }
+
+/* home products grid */
+.homeProducts{
+   display: grid;
+   @media (min-width:768px) and (max-width:1540px){
+    grid-template-columns: repeat(2, 50%);
+    gap: 10px;
+  }
+  @media (min-width:320px) and (max-width:767px){
+    grid-template-columns: repeat(2, 50%);
+    gap: 10px;
+  }
+}
+
+/* no scrollball */
+.noScroll::-webkit-scrollbar{
+  display: none;
+}
+
+/* upcomProd grid */
+.upcomProd{
+  display: grid;
+  gap: 10px;
+  @media (min-width:768px) and (max-width:1540px){
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

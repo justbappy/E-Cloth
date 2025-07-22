@@ -10,11 +10,11 @@ const Footer = () => {
         <div className=" container flex flex-wrap sm:justify-between py-5 border-b-2 border-slate-600 sm:gap-10 xs:gap-10 xs:justify-center">
             <div className="flex flex-col gap-4 xs:gap-0">
                 <h1 className="font-[sprintura] text-[25px]">E-Cloth</h1>
-                <p className="sm:text-[1.4rem] xs:text-[13px]">Contact: +91 7823166190</p>
-                <p className="sm:text-[1.4rem] xs:text-[13px] w-[250px]  sm:w-[220px]">Adress: Street 2, Shop no. 3, E-Cloth Center, Gabinagar, Navi Mumbai</p>
+                <p className="sm:text-[1.2rem] xs:text-[13px]">Contact: +91 7823166190</p>
+                <p className="sm:text-[1.2rem] xs:text-[13px] w-[250px]  sm:w-[220px]">Adress: Street 2, Shop no. 3, E-Cloth Center, Gabinagar, Navi Mumbai</p>
             </div>
             <div>
-                <ul className="flex flex-col items-center sm:text-[1.4rem] xs:text-[13px]">
+                <ul className="flex flex-col items-center sm:text-[1.2rem] xs:text-[13px]">
                     <li>
                         <Link className="navHover font-bold">Home</Link>
                     </li>
@@ -36,7 +36,7 @@ const Footer = () => {
                 </ul>
             </div>
             <div>
-                <ul className="flex flex-col items-center sm:text-[1.4rem] xs:text-[13px]">
+                <ul className="flex flex-col items-center sm:text-[1.2rem] xs:text-[13px]">
                     <li>
                         <Link className="navHover font-bold">Contact Us</Link>
                     </li>
