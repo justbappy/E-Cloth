@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
@@ -13,6 +13,7 @@ const Register = () => {
     const [firstname, setFirstName] = useState('');
     const [lastname, setLastName] = useState('');
     const ErrorMessage = "*User with this email already exists*"
+    const navigate = useNavigate();
 
     const showPass = (e) => {
         if(document.getElementById('password').type == 'password'){
@@ -52,7 +53,7 @@ const Register = () => {
         setEmail("");
         setPassword("");
         document.getElementById('error').innerText = "";
-        
+        navigate('/login');
     }
 
     return (
